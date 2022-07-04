@@ -36,11 +36,11 @@ const signInWithGoogle = () => {
             .then((result) => {
                 localStorage.setItem('USER_INFORMATION', JSON.stringify(result.user.displayName));
                 window.location.reload(true)
-                   console.log(result.user.displayName)
+                   
                 })
               
             .catch((error) => {
-                console.log(error)
+                alert(error)
             })
     }  
 
@@ -55,7 +55,7 @@ const signInWithGoogle = () => {
         if (data !== null) setUserInfo(data);
         setUserInfo(data)
         
-        console.log(userInfo)
+
     }, [userInfo]);
     
 
@@ -78,7 +78,7 @@ const signInWithGoogle = () => {
     const totalQty = state.basket.reduce((totalQty, item) => {
         return totalQty + (item.qty)
     }, 0)
-    console.log(totalQty)
+
 
 
     const decQty = (itemID) => {

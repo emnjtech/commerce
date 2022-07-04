@@ -24,7 +24,7 @@ export default function HeroProducts() {
             <>
                 <div className='w-[90%] mx-auto my-6 flex justify-between  h-[50px]'><div className='bg-blue-400 h-full w-[20%]'></div>
                     <Fade>
-                    <div className='w-[40%]'><h1 className='text-center text-blue-400 text-xl md:text-3xl h-full p-2 font-bold'>NEW ARRIVALS OF THE WEEK </h1></div>
+                    <div className='w-[40%]'><h1 className='text-center text-blue-400 text-base md:text-3xl h-full p-2 font-bold'>NEW ARRIVALS OF THE WEEK </h1></div>
                         <div className='bg-blue-400 h-full w-[20%]'></div></Fade></div>
                 <Slide left>
                 <div className="className='md:w-[90%] mx-auto w-[90%] md:h-[500px] md:mb-10 mb-1 h-[300px] ">

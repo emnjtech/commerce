@@ -1,4 +1,4 @@
-import React, {useContext,useState } from 'react'
+import React, {useContext,useState,useEffect } from 'react'
 import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom'
 import productItems from "./productApi";
@@ -14,7 +14,9 @@ export default function SneakersItemDisplay() {
 
 
   
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
 
  

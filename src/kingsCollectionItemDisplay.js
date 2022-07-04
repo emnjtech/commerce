@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext,useEffect } from 'react'
 import { toast } from 'react-toastify';
 import { useParams, } from 'react-router-dom'
 import ReactImageZoom from 'react-image-zoom';
@@ -14,7 +14,9 @@ export default function KingsCollectionItemDisplay() {
 
 
 
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  },);
 
 
 

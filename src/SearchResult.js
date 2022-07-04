@@ -4,6 +4,7 @@ import productItems from './productApi';
 import { Link, useLocation } from 'react-router-dom'
 import hottestApi from './hottestApi'
 import kingsData from './kingscollectiondata';
+import Slide from 'react-reveal/Slide';
 function SearchResult() {
 
 
@@ -30,8 +31,9 @@ function SearchResult() {
 
 
 
-
+            
             <div className='grid md:grid-cols-5 grid-cols-2 gap-4'>
+                <Slide top>
                 <div className=' md:col-span-5  col-span-2'><h1 className='text-center font-bold text-xl text-blue-400 bg-slate-100 p-4'>Sneakers Store</h1></div>
                 {searchData.length !== 0? 
                 searchData.map(({
@@ -48,9 +50,14 @@ function SearchResult() {
                         <h1 className=' px-4 text-sm'>${pricing}</h1>
                     </div>)) : <div className=' md:col-span-5 '>
                         
-                        <h1 className='text-center font-bold'>Searched Item Not Found</h1></div>}
+                        <h1 className='text-center font-bold'>Searched Item Not Found</h1></div> }
+                
+                </Slide>
                 
 
+
+
+                <Slide top>
                 <div className=' md:col-span-5 col-span-2'><h1 className='text-center font-bold text-xl text-blue-400 bg-slate-100 p-4'>Leather Shoes Store</h1></div>
                 {searchData2.length !== 0 ?
                     searchData2.map(({
@@ -68,7 +75,9 @@ function SearchResult() {
                         </div>)) : <div className=' md:col-span-5 '>
 
                         <h1 className='text-center font-bold'>Searched Item Not Found</h1> </div>}
+                </Slide>
                 
+                <Slide top>
                 <div className=' md:col-span-5 col-span-2 '><h1 className='text-center font-bold text-xl text-blue-400 bg-slate-100 p-4'>Kings Collection Store</h1></div>
                 {searchData3.length !== 0 ?
                     searchData3.map(({
@@ -85,7 +94,8 @@ function SearchResult() {
                             <h1 className=' px-4 text-sm'>${pricing}</h1>
                         </div>)) : <div className='md:col-span-5 '>
                         
-                        <h1 className='text-center font-bold'>Searched Item Not Found</h1></div>}
+                            <h1 className='text-center font-bold'>Searched Item Not Found</h1></div>}
+                </Slide>
             </div>
         </div>
 

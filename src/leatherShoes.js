@@ -1,4 +1,4 @@
-import React, {useContext,useState } from 'react'
+import React, {useContext,useState,useEffect } from 'react'
 import { toast } from 'react-toastify';
 import { useParams } from 'react-router-dom'
 import ReactImageZoom from 'react-image-zoom';
@@ -37,7 +37,9 @@ export default function LeatherShoes() {
         })
     }
 
- 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    });
 
     return (
         <div className='w-[90%] h-full mx-auto my-9 '>
