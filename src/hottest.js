@@ -51,7 +51,7 @@ function Hottest({ key, title, pricing, image, qty,alt,id,size }) {
             
 
                           </div>
-                          <div className=" h-[30px] px-3 p-1 "> <h1 className=' text-[16px] font-bold'>$ {pricing}</h1></div>
+                          <div className=" h-[30px] px-3 py-2 "> <h1 className=' md:text-[16px] text-[11px] font-bold'>$ {pricing}</h1></div>
                           <div className=" h-[30px] px-3 p-1"> {<Icon icon="bi:cart-plus-fill" onClick={handleAddToCart} className='text-2xl  text-blue-400' />  }</div>
                       </div>
                   

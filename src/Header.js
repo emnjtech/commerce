@@ -105,13 +105,18 @@ function Header() {
                     <div className={!mobileSearch ? 'hidden md:hidden ' : 'w-[full] h-full '}>
                         <input type='text' className='md:hidden text-[13px] bg-blue-200 p-4  rounded-full outline-none md:rounded-full 
                         focus:border-[0px] md:box-border box-border md:border-[0px] 
-                        h-full ' placeholder='Search...' />
+                        h-full ' placeholder='Search...' onKeyPress={(e) => {
+                                if (e.key === "Enter") {
+                                    handleSearchClick()
+                                }
+                            }} value={searchField} onChange={handleChange}
+                        />
                     </div> 
                     <div className='bg-transparent rounded-full w-10 h-full md:hidden ml-auto z-10'>{!mobileSearch ?
                         <Icon icon="bxs:search" onClick={handleMobileSearch} className=' md:h-[full] w-7 h-[30px] text-blue-800 mx-auto my-1' />
                         : <div className='flex my-1'>
                             <Icon icon="arcticons:xiaoyuan-search" onClick={handleMobileSearch} className=' md:h-[full] w-7 h-[30px] text-blue-800 mx-auto my-auto' />
-                            <Icon icon="bxs:search" className=' md:h-[full] w-7 h-[30px] text-blue-800 mx-auto my-auto  ' /></div>}</div>
+                            <Icon icon="bxs:search" className=' md:h-[full] w-7 h-[30px] text-blue-800 mx-auto my-auto ' onClick={handleSearchClick} /></div>}</div>
                 </div>
 
 
@@ -176,7 +181,7 @@ function Header() {
 
                     <div className='flex flex-col mb-4'>
 
-                    {!currUser ? <Link to="/designs"> <h1 className='text-[15px] font-bold p-2 pr-2'>My Account</h1></Link> : 
+                    {!currUser ? <Link to="/signIn"> <h1 className='text-[15px] font-bold p-2 pr-2'>My Account</h1></Link> : 
                         <div>
 
                             <h1 className='font-bold p-2 text-xs text-center'>{userInfo}</h1>

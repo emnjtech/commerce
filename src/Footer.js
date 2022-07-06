@@ -153,7 +153,7 @@ export default function Footer() {
                     <div className='flex md:flex justify-center '>
                         <a href="https://github.com/emnjtech/"><FaGithub className='w-9 h-9 m-2' /></a>
                         <a href="www.linkedin.com/in/themartinzjr"><FaLinkedin className='w-9 h-9 m-2' /> </a></div>
-                        <h1 className='text-center font-bold text-sm text-white'> <a href="https://emnjtech.github.io" target="_blank" rel="noreferrer">About Developer</a></h1>
+                        <h1 className='text-center font-bold text-sm text-white'> <a href="https://emnj.tech" target="_blank" rel="noreferrer">About Developer</a></h1>
 
                 </div>
                 </Slide>

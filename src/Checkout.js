@@ -1,7 +1,7 @@
 import React from 'react'
 import CheckoutProduct from './CheckoutProduct'
 import Subtotal from './Subtotal'
-import { useContext } from "react";
+import { useContext,useEffect } from "react";
 import CommerceContext from "./context/commerce-context";
 
 
@@ -13,7 +13,9 @@ function Checkout() {
 
   const { basket, removeFromCart,totalQty } = useContext(CommerceContext)
   
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
    const sum = basket.reduce((total, item) => {
      return total + (item.pricing * item.qty);
